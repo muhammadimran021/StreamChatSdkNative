@@ -58,6 +58,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     
     // Flutter module dependency from JitPack
-    implementation("com.github.muhammadimran021:StreamChatSdkNative:34daab3")
+    // implementation("com.github.muhammadimran021:StreamChatSdkNative:34daab3")
+    
+    // Flutter module dependency from JitPack
+    implementation("com.github.muhammadimran021:StreamChatSdkNative:1.0.0")
 
 }
