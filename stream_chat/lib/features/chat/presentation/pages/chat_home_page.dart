@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:stream_chat_app/features/chat/presentation/pages/thread_page.dart';
+import 'package:stream_chat_module/features/chat/presentation/pages/thread_page.dart';
 import 'package:stream_chat_flutter/stream_chat_flutter.dart';
 
 import '../../../auth/presentation/bloc/auth_bloc.dart';

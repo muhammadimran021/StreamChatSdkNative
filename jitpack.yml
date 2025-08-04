@@ -18,7 +18,7 @@ script:
   - flutter pub get
   - flutter build aar --output-dir=build/host/outputs/repo
   - cd .android
-  - ./gradlew clean build
+  - ./gradlew clean assembleRelease
 
 after_success:
   - echo "Build completed successfully" 
