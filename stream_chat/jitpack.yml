@@ -1,0 +1,28 @@
+# JitPack configuration for Flutter module as Android library
+# This builds the Flutter module for Android integration
+
+jdk:
+  - openjdk11
+
+# Build the Android library
+script:
+  - echo "Building Flutter module for Android..."
+  - cd .android
+  - ./gradlew clean
+  - ./gradlew build
+  - ./gradlew assembleRelease
+  - echo "Flutter module built successfully"
+
+# Artifacts to publish
+artifacts:
+  - .android/build/outputs/aar/
+  - .android/build/intermediates/aar_main_jar/
+  - lib/
+  - pubspec.yaml
+  - README.md
+  - ANDROID_README.md
+
+# Post-build actions
+after_success:
+  - echo "Flutter module build completed successfully"
+  - echo "Module is ready for Android integration via JitPack" 
