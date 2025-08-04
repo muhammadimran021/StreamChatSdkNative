@@ -57,8 +57,9 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     
-    // Flutter module dependency
-    implementation(project(":flutter"))
+    // Flutter module dependency from JitPack
+    // Use commit hash until JitPack builds the tag
+    implementation("com.github.muhammadimran021:StreamChatSdkNative:303d18f")
     
 
 }

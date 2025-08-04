@@ -18,13 +18,16 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven("$storageUrl/download.flutter.io")
+        maven("https://jitpack.io")
     }
 }
 
 rootProject.name = "My Application"
 include(":app")
 
-// Include the Flutter module as a subproject
-val filePath = settingsDir.toString() + "/stream_chat/.android/include_flutter.groovy"
-apply(from = File(filePath))
+// Only include Flutter module locally if not building for JitPack
+if (!System.getenv("JITPACK").toBoolean()) {
+    // Flutter module is now published to JitPack
+    // No need for local inclusion
+}
 

@@ -1,6 +1,3 @@
-# JitPack configuration for Flutter module as Android library
-# This builds the Flutter module for Android integration
-
 jdk:
   - openjdk11
 
@@ -17,6 +14,7 @@ before_script:
 
 script:
   - echo "Building Flutter module"
+  - cd stream_chat
   - flutter pub get
   - flutter build aar --output-dir=build/host/outputs/repo
   - cd .android
