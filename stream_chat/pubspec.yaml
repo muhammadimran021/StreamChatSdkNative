@@ -1,4 +1,4 @@
-name: stream_chat_app
+name: stream_chat
 description: "A comprehensive Flutter chat module built with Stream Chat SDK, featuring authentication, user search, and real-time messaging capabilities."
 
 # The following defines the version and build number for your application.
@@ -18,9 +18,9 @@ description: "A comprehensive Flutter chat module built with Stream Chat SDK, fe
 version: 1.0.0+1
 
 # Package metadata for publication
-homepage: https://github.com/muhammadimran021/flutter_stream_chat
-repository: https://github.com/muhammadimran021/flutter_stream_chat
-issue_tracker: https://github.com/muhammadimran021/flutter_stream_chat/issues
+homepage: https://github.com/muhammadimran021/StreamChatSdkNative
+repository: https://github.com/muhammadimran021/StreamChatSdkNative
+issue_tracker: https://github.com/muhammadimran021/StreamChatSdkNative/issues
 license: MIT
 keywords:
   - flutter

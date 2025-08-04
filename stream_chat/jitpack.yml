@@ -4,25 +4,21 @@
 jdk:
   - openjdk11
 
-# Build the Android library
+before_install:
+  - echo "JitPack build starting for StreamChatSdkNative"
+
+install:
+  - echo "Installing dependencies"
+
+before_script:
+  - echo "Setting up Flutter"
+  - export PATH="$PATH:/opt/flutter/bin"
+  - flutter --version
+
 script:
-  - echo "Building Flutter module for Android..."
-  - cd .android
-  - ./gradlew clean
-  - ./gradlew build
-  - ./gradlew assembleRelease
-  - echo "Flutter module built successfully"
+  - echo "Building Flutter module"
+  - flutter pub get
+  - flutter build aar --output-dir=build/host/outputs/repo
 
-# Artifacts to publish
-artifacts:
-  - .android/build/outputs/aar/
-  - .android/build/intermediates/aar_main_jar/
-  - lib/
-  - pubspec.yaml
-  - README.md
-  - ANDROID_README.md
-
-# Post-build actions
 after_success:
-  - echo "Flutter module build completed successfully"
-  - echo "Module is ready for Android integration via JitPack" 
+  - echo "Build completed successfully" 
