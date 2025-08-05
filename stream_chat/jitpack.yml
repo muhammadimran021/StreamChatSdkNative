@@ -1,5 +1,5 @@
 jdk:
-  - openjdk11
+  - openjdk17
 
 before_install:
   - echo "JitPack build starting for StreamChatSdkNative"
@@ -17,7 +17,7 @@ script:
   - flutter pub get
   - flutter build aar --output-dir=build/host/outputs/repo
   - cd .android
-  - ./gradlew clean assembleRelease
+  - ./gradlew clean assembleRelease publishToMavenLocal
 
 after_success:
   - echo "Build completed successfully" 
