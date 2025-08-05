@@ -14,10 +14,12 @@ before_script:
 
 script:
   - echo "Building Flutter module"
+  - cd stream_chat
   - flutter pub get
   - flutter build aar --output-dir=build/host/outputs/repo
   - cd .android
-  - ./gradlew clean assembleRelease publishToMavenLocal
+  - ./gradlew clean assembleRelease
+  - ./gradlew publishToMavenLocal
 
 after_success:
   - echo "Build completed successfully" 
